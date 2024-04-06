@@ -34,3 +34,35 @@ pub fn get_random_phrase() -> Vec<String> {
     }
     result_phrase
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_get_random_number() {
+        let min = 1;
+        let max = 2047;
+        let random_number = get_random_number(Some(min), Some(max));
+        assert!(random_number >= min && random_number <= max, "Random number is within specified range.");
+    }
+
+    #[test]
+    fn test_convert_number_to_word() {
+        let expected_word = "abandon";
+        let word = convert_number_to_word(1);
+        assert_eq!(word, expected_word, "First word should be '{}'.", expected_word);
+    }
+
+    #[test]
+    fn test_get_random_word() {
+        let word = get_random_word();
+        assert!(!word.is_empty(), "Random word should not be empty.");
+    }
+
+    #[test]
+    fn test_get_random_phrase_length() {
+        let phrase = get_random_phrase();
+        assert_eq!(phrase.len(), 12, "Phrase should contain 12 words.");
+    }
+}
