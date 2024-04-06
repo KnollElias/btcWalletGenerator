@@ -44,14 +44,21 @@ mod tests {
         let min = 1;
         let max = 2047;
         let random_number = get_random_number(Some(min), Some(max));
-        assert!(random_number >= min && random_number <= max, "Random number is within specified range.");
+        assert!(
+            random_number >= min && random_number <= max,
+            "Random number is within specified range."
+        );
     }
 
     #[test]
     fn test_convert_number_to_word() {
         let expected_word = "abandon";
         let word = convert_number_to_word(1);
-        assert_eq!(word, expected_word, "First word should be '{}'.", expected_word);
+        assert_eq!(
+            word, expected_word,
+            "First word should be '{}'.",
+            expected_word
+        );
     }
 
     #[test]
