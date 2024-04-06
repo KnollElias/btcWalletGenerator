@@ -1,3 +1,8 @@
+mod generate_password;
+
 fn main() {
-    println!("Hello, world!");
+    let phrase = generate_password::get_random_phrase();
+    for word in phrase {
+        println!("{}", word);
+    }
 }
