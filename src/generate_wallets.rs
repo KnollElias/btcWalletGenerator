@@ -38,8 +38,8 @@ pub fn generate_wallets_to_csv(csv_path: &str, number_of_wallets: usize) -> io::
 }
 
 fn main() {
-    let csv_path = "./wallets.csv";
-    let number_of_wallets = 5;
+    let csv_path = "./wallets.csv"; // showld be runtime parameter
+    let number_of_wallets = 5; // showld be runtime parameter
 
     if let Err(e) = generate_wallets_to_csv(csv_path, number_of_wallets) {
         eprintln!("Failed to generate wallets: {}", e);
