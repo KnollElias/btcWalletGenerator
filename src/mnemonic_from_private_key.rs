@@ -17,7 +17,7 @@ pub fn private_key_to_mnemonic(private_key: &SecretKey) -> Vec<String> {
 }
 
 fn main() {
-    let private_key_wif = "L3TEcrgashjdghkjdgafslkjasdf";
+    let private_key_wif = "L3DEcrgpBFRq9FAfaTV1s2yPpgXWq8zAANWhtB4wnBGjCJNu3pT1";
     let secp = secp256k1::Secp256k1::new();
     let private_key = SecretKey::from_str(private_key_wif).expect("Invalid private key WIF");
 
